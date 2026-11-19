@@ -1,0 +1,8 @@
+.DS_Store
+.firebase/
+.firebaserc.local
+__pycache__/
+*.pyc
+firebase-debug.log
+node_modules/
+.env*

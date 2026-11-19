@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "site": "thescienceoftattooing",
+    "public": "public",
+    "cleanUrls": true,
+    "trailingSlash": true,
+    "ignore": ["firebase.json", "**/.*"],
+    "redirects": [
+      { "source": "/meet-the-team", "destination": "/about/", "type": 301 },
+      { "source": "/store", "destination": "/book/", "type": 301 },
+      { "source": "/shop", "destination": "/book/", "type": 301 },
+      { "source": "/artistsubmission", "destination": "/contact/", "type": 301 },
+      { "source": "/blog", "destination": "/", "type": 301 },
+      { "source": "/post/**", "destination": "/", "type": 301 },
+      { "source": "/play", "destination": "https://the-science-of-tattooing-dfec8.web.app/", "type": 302 }
+    ],
+    "headers": [
+      { "source": "**/*.@(css|png|svg)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] },
+      { "source": "**", "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]}
+    ]
+  }
+}
